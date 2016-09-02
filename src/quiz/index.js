@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { data } from './data_config'
+import $ from "jquery";
 
 class Quiz extends Component {
     constructor(props) {
@@ -8,12 +9,23 @@ class Quiz extends Component {
             question: data.question
         }
     }
+    componentDidMount() {
+       $('#epsiode, #bottom, .mouse').slideUp(500);
+        $('.logo__title').delay(500).fadeOut(500);
+      $('h2').click(function(event) {
+        $('#epsiode, #bottom, .mouse').slideUp(500);
+        $('.logo__title').delay(500).fadeOut(500);
+      });
+    }
   render() {
     console.log(data);
     return (
-      <div className="app">
-        <h1>ПЕРВЫЙ</h1>
-        {data.title}
+      <div className="quiz">
+      <h1>Юмор и котики –
+средство от всех бед</h1>
+        <div className="quiz__container">
+          {data.title}
+        </div>
       </div>
     );
   }

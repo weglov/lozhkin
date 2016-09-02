@@ -5,7 +5,10 @@ import './landing.css';
 import Quiz from './quiz/index';
 import "jquery-colorbox";
 
-ReactDOM.render(
-  <Quiz />,
-  document.getElementById('quiz')
-);
+if (location.href === 'http://localhost:3000/') {
+	ReactDOM.render(
+	  <Quiz />,
+	  document.getElementById('quiz')
+	);
+
+}

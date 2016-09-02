@@ -1,8 +1,7 @@
 @import './reset.css';
 @import './colorbox.css';
-
 #quiz {
-    display: none;
+    display: block;
 }
 
 body {
@@ -48,6 +47,14 @@ body {
     }
 }
 
+@font-face {
+    font-family: "NeuchaRegular";
+    src: url("fonts/NeuchaRegular.eot");
+    src: url("fonts/NeuchaRegular.eot?#iefix")format("embedded-opentype"), url("fonts/NeuchaRegular.woff") format("woff"), url("fonts/NeuchaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 .logo__title {
     position: absolute;
     top: 50%;
@@ -77,6 +84,35 @@ body {
         line-height: 1.5;
         font-size: 1.3rem;
         font-weight: 300;
+    }
+}
+
+.quiz {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 440px;
+    margin-top: -220px;
+    text-align: center;
+    display: block;
+    text-align: center;
+    width: 700px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    font-weight: 300;
+    h1 {
+        font-family: "NeuchaRegular";
+        color: #f8ac3f;
+        font-size: 4rem;
+        line-height: 1;
+    }
+    &__container {
+        margin-top: 25px;
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 25px;
+        box-sizing: border-box;
+        padding: 25px;
     }
 }
 
@@ -211,25 +247,25 @@ body {
             display: block;
             height: 180px;
             &.img2 {
-                   background-position: -310px 0;
+                background-position: -310px 0;
             }
             &.img3 {
-                   background-position: -600px 0;
+                background-position: -600px 0;
             }
             &.img4 {
-                   background-position: -910px 0;
+                background-position: -910px 0;
             }
             &.img5 {
-                   background-position: 0 -185px;
+                background-position: 0 -185px;
             }
             &.img6 {
-                   background-position: -310px -185px;
+                background-position: -310px -185px;
             }
             &.img7 {
-                   background-position: -600px -185px;
+                background-position: -600px -185px;
             }
             &.img8 {
-                   background-position: -910px -185px;
+                background-position: -910px -185px;
             }
         }
         .episode__title {
@@ -315,4 +351,3 @@ body {
         }
     }
 }
-
