@@ -6,6 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var url = require('url');
 var paths = require('./paths');
 var env = require('./env');
+var precss = require('precss');
 
 // Assert this just to be safe.
 // Development builds of React are slow and not intended for production.
@@ -164,7 +165,8 @@ module.exports = {
           'Firefox ESR',
           'not ie < 9', // React doesn't support IE8 anyway
         ]
-      }),
+      }), 
+      precss
     ];
   },
   plugins: [

@@ -1,11 +1,95 @@
 <!doctype html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=1200, initial-scale=1">
     <title>Lozhkin</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <section id="first_screen">
+        <div class="container">
+            <div class="logo">
+                <a href="http://ren.tv" target="_blank">РЕН ТВ</a>
+                <a class="logo__lozhkin" href="http://vasya-lozhkin.ru/" target="_blank">Ложкин</a>
+            </div>
+            <div class="logo__title">
+                <h1>Ложкин и Котики на РЕН ТВ</h1>
+                <h2>Спецпроект телеканала РЕН ТВ и художника Василия Ложкина</h2>
+                <div class="title">С 5 сентября каждый час в эфире РЕН ТВ – <br> анимационные заставки популярных программ телеканала, нарисованные Василием Ложкиным.</div>
+            </div>
+        </div>
+        <div class="mouse">
+        	  <div class="mouse-icon">
+    <span class="mouse-wheel"></span>
+  </div>
+        </div>
+    </section>
+    <section id="epsiode">
+        <div class="container">
+            <ul>
+                <li><a class="youtube" href="http://www.youtube.com/embed/9PAsOPzxlfw?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img1"></span><span class="episode__title">Новости</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/41N2SEngcA8?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img2"></span><span class="episode__title">Территория заблуждений</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/TDJheGEBX-s?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img3"></span><span class="episode__title">Военная тайна</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/Vs4AApeIIAI?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img4"></span><span class="episode__title">100% кино</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/TSl1XUC9N40?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img5"></span><span class="episode__title">Соль</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/F2aF5pAzQcQ?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img6"></span><span class="episode__title">Задорнов</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/ZR7nVb_DKyc?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img7"></span><span class="episode__title">Званый ужин</span></a></li>
+                <li><a class="youtube" href="http://www.youtube.com/embed/MAH2AI6mE8A?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img8"></span><span class="episode__title">«Не выйдет в эфир»</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <section id="quiz"></section>
+    <section id="bottom">
+        <div class="container">
+            <h2>О проекте</h2>
+            <div class="testimotion testimotion--vasya">
+                <div class="testimotion__container">
+                    <h4>Василий Ложкин, художник</h4>
+                    <div class="testimotion__text">«Люблю про инопланетян про всяких, про заговор мирового правительства против нашей прекрасной Родины, про то, как американцы проклятые точат на нас зубы и мечтают о том, чтобы вцепиться и разорвать нашу страну в клочья. Если я смотрю телевизор, то скорее всего – РЕН ТВ. Это достаточно интересный опыт – из больших телеканалов такого еще никто не делал».</div>
+                </div>
+                <div class="testimotion__photo"></div>
+            </div>
+            <div class="testimotion testimotion--timur">
+                <div class="testimotion__container">
+                    <h4>Тимур Родригез, шоумен:</h4>
+                    <div class="testimotion__text">«Самой веселой и неуправляемой с точки зрения разных звуков получилась бабушка. Но кот был мне интереснее всего, потому что он не мог говорить ничего, кроме «мяу». Бабушка постоянно находилась в диалоге с «дедом» или котом, а вот кот выражал свои эмоции только с помощью «мяуканья». </div>
+                </div>
+                <div class="testimotion__photo"></div>
+            </div>
+            <div class="footer">
+                <div class="logo">
+                    <a href="http://ren.tv" target="_blank">РЕН ТВ</a>
+                    <a class="logo__lozhkin"  href="http://vasya-lozhkin.ru/" target="_blank">Ложкин</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<script>
+            jQuery(function() {
+              jQuery('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                    jQuery('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                  }
+                }
+              });
+            });
+    		jQuery(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+            jQuery('.mouse').click(function(event) {
+                jQuery('html, body').animate({
+                      scrollTop: jQuery('#epsiode').offset().top
+                    }, 1000);
+                });
+    </script>
 </html>
