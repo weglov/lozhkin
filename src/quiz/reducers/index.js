@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import data from './data'
-import result from './result'
+import result from './question'
 
 export default combineReducers({
   data,
