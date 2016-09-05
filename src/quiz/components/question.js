@@ -33,12 +33,16 @@ class Question extends Component {
 		let nodes = question.map((nodes,i) => {
 		  return (<QuestionItem key={i} id={i} data={nodes} change={this.onChange} active={this.state.selectAnswer} label={this.props.data.question[current].answer}></QuestionItem>);
 		});
-		return (
-			<div className="quiz__wrap">
-				<h4>{this.props.data.question[current].title}</h4>
-				<ul className="quiz__answers">{nodes}</ul>
-			</div>
-		);
+		if (!this.props.active) {
+			return (
+				<div className="quiz__wrap">
+					<h4>{this.props.data.question[current].title}</h4>
+					<ul className="quiz__answers">{nodes}</ul>
+				</div>
+			);
+		} else {
+			return null;
+		}
 	}
 }
 

@@ -12,3 +12,10 @@ export function selectQuestion(next) {
     payload: next
   }
 }
+
+export function selectSense(next) {
+  return {
+    type: 'RESULT_SENSE',
+    payload: next
+  }
+}

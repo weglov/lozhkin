@@ -10,6 +10,8 @@ export default function userstate(state = initialState, action) {
             return {...state, currentQuestion: action.payload }
         case 'SELECT_QUESTION':
             return {...state, selectQuestion:  action.payload }
+        case 'RESULT_SENSE':
+        	return {...state, result:  action.payload }
         default:
             return state;
     }
