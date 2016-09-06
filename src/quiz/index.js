@@ -16,11 +16,19 @@ class Quiz extends Component {
         }
     }
     componentDidMount() {
-        $('#epsiode, #bottom, .mouse').slideUp(500);
-        $('.logo__title').delay(500).fadeOut(500);
-        $('h2').click(function(event) {
-          $('#epsiode, #bottom, .mouse').slideUp(500);
+      
+        // $('#epsiode, #bottom, .mouse').slideUp(500);
+        // $('.logo__title').delay(500).fadeOut(500);
+        
+        $('#bottom__quiz').click(function(event) {
+          $('html, body').animate({
+              scrollTop: 0
+          }, 1000);
+          $('#epsiode, #bottom, .mouse, #about').slideUp(500);
           $('.logo__title').delay(500).fadeOut(500);
+          $('.quiz').delay(1000).fadeIn(500);
+          
+          $('#first_screen, body').addClass('active__quiz');
         });
     }
   render() {
