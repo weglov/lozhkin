@@ -30,11 +30,26 @@ class QuizContainer extends Component {
       if(this.props.result.currentQuestion >= this.props.data.question.length && this.props.result.finish) {
         this.endQuiz(this.props.result.finish);
       }
+      if(this.props.result.finish && this.state.finish) {
+        this.restartPLS();
+      }
+    }
+    restartPLS = () => {
+        this.setState({
+            next: 'Далее',
+            result: false,
+            sense: '',
+            title: 'Вопрос ' + this.props.result.currentQuestion + ' / ' + this.props.data.question.length,
+            data: this.props.data,
+            finish: ''
+      });
+      this.props.questionActions.restart();
     }
     endQuiz = (e) => {
       this.setState({
         finish: e,
-         title:this.props.data.sense[this.state.sense].answer[e]
+        title:this.props.data.sense[this.state.sense].answer[e],
+        next: 'Пройти еще раз'
       });
     }
     resultShow = () => {
@@ -63,13 +78,14 @@ class QuizContainer extends Component {
         
     }
   	render() {
+      let diagnos = this.state.finish ? this.props.data.result[this.state.finish] : ''
     	return (
     	<div className={"quiz__container " + this.state.sense}>
     		<h3>{this.state.title}</h3>
         <Question active={this.state.result} data={this.state.data} question={this.props.result.currentQuestion} />
         <Results answer={this.state.finish} finish={this.props.questionActions.resultSense} result={this.state.result} connect={this.state.data.result} data={this.state.data.sense[this.state.sense]} />
+        <ButtonShare share={diagnos} active={this.state.finish ? 'active' : 'noactive'} uid={this.state.finish} />
         <button className={this.state.finish ? 'active' : 'noactive'} onClick={this.nextQuestionHandler}>{this.state.next}</button>
-        <ButtonShare active={this.state.finish ? 'active' : 'noactive'} uid={this.state.finish} />
     	</div>
     	);
 	}

@@ -26,3 +26,10 @@ export function selectSense(next) {
     payload: next
   }
 }
+
+export function restart(next) {
+  return {
+    type: 'RESTART_QUIZ',
+    payload: next
+  }
+}

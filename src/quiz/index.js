@@ -23,12 +23,14 @@ class Quiz extends Component {
         $('#bottom__quiz').click(function(event) {
           $('html, body').animate({
               scrollTop: 0
-          }, 1000);
-          $('#epsiode, #bottom, .mouse, #about').slideUp(500);
-          $('.logo__title').delay(500).fadeOut(500);
-          $('.quiz').delay(1000).fadeIn(500);
-          
-          $('#first_screen, body').addClass('active__quiz');
+          }, 500);
+          setTimeout(function() {
+              $('#epsiode, #bottom, .mouse, #about').fadeOut(200);
+              $('.logo__title').fadeOut(0);
+              $('.quiz').delay(300).fadeIn(500);
+              $('#first_screen, body').addClass('active__quiz');
+          }, 500)
+         
         });
     }
   render() {

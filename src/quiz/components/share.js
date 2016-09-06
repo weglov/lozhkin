@@ -11,8 +11,15 @@ export default class ButtonShare extends Component {
         }
     }
     onShareClick = (e) => {
-        console.log(e.target.value);
-        let url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid
+        let diagnos = 'Мой ' + this.props.share.title.replace(/<\/?[^>]+>/g,'').toLowerCase();
+        let url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&t=1';
+        if (e.target.value === 'fb') {
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&t=' + decodeURI(diagnos);
+        } else if (e.target.value === 'vk') {
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&description=' + decodeURI(diagnos);
+        } else {
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&text=' + decodeURI(diagnos);
+        }
         window.open(url, '', "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600");
         }
     render() {

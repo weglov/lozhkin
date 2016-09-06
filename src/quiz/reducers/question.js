@@ -15,6 +15,8 @@ export default function userstate(state = initialState, action) {
         	return {...state, result:  action.payload }
         case 'RESULT_SENSE':
             return {...state, finish:  action.payload }
+        case 'RESTART_QUIZ':
+            return initialState;
         default:
             return state;
     }
