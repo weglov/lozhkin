@@ -7,6 +7,7 @@
     <title>Lozhkin</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&subset=cyrillic" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,14 +32,24 @@
         <div class="container">
             <h2>Заставки</h2>
             <ul>
-                <li><a class="youtube" href="http://www.youtube.com/embed/9PAsOPzxlfw?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img1"></span><span class="episode__title">Новости</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/41N2SEngcA8?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img2"></span><span class="episode__title">Территория заблуждений</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/TDJheGEBX-s?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img3"></span><span class="episode__title">Военная тайна</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/Vs4AApeIIAI?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img4"></span><span class="episode__title">100% кино</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/TSl1XUC9N40?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img5"></span><span class="episode__title">Соль</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/F2aF5pAzQcQ?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img6"></span><span class="episode__title">Задорнов</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/ZR7nVb_DKyc?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img7"></span><span class="episode__title">Званый ужин</span></a></li>
-                <li><a class="youtube" href="http://www.youtube.com/embed/MAH2AI6mE8A?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img8"></span><span class="episode__title">«Не выйдет в эфир»</span></a></li>
+                <li data-id="9PAsOPzxlfw"><a class="youtube" href="http://www.youtube.com/embed/9PAsOPzxlfw?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img1"></span><span class="episode__title">Новости</span></a>
+                    <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button>
+                </li>
+                <li data-id="41N2SEngcA8"><a class="youtube" href="http://www.youtube.com/embed/41N2SEngcA8?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img2"></span><span class="episode__title">Территория заблуждений</span></a>
+                    <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button>
+                </li>
+                <li data-id="TDJheGEBX-s"><a class="youtube" href="http://www.youtube.com/embed/TDJheGEBX-s?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img3"></span><span class="episode__title">Военная тайна</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
+                <li data-id="Vs4AApeIIAI"><a class="youtube" href="http://www.youtube.com/embed/Vs4AApeIIAI?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img4"></span><span class="episode__title">100% кино</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
+                <li data-id="TSl1XUC9N40"><a class="youtube" href="http://www.youtube.com/embed/TSl1XUC9N40?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img5"></span><span class="episode__title">Соль</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
+                <li data-id="F2aF5pAzQcQ"><a class="youtube" href="http://www.youtube.com/embed/F2aF5pAzQcQ?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img6"></span><span class="episode__title">Задорнов</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
+                <li data-id="ZR7nVb_DKyc"><a class="youtube" href="http://www.youtube.com/embed/ZR7nVb_DKyc?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img7"></span><span class="episode__title">Званый ужин</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
+                <li data-id="MAH2AI6mE8A"><a class="youtube" href="http://www.youtube.com/embed/MAH2AI6mE8A?rel=0&amp;wmode=transparent&amp;autoplay=1"><span class="episode__image img8"></span><span class="episode__title">«Не выйдет в эфир»</span></a>
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i></button><button class="twi"><i class="fa fa-twitter" aria-hidden="true"></i></button><button class="vk"><i class="fa fa-vk" aria-hidden="true"></i></button></li>
             </ul>
         </div>
     </section>
@@ -118,6 +129,8 @@ jQuery('.mouse').click(function(event) {
         scrollTop: jQuery('#epsiode').offset().top
     }, 1000);
 });
+
+
 </script>
 
 </html>

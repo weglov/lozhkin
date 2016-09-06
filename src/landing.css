@@ -213,7 +213,7 @@ body {
     box-sizing: border-box;
     color: #fff;
     ul {
-        margin: 30px -10px;
+        margin: 15px -10px;
     }
     h2 {
         font-family: "NeuchaRegular";
@@ -226,6 +226,27 @@ body {
         vertical-align: top;
         width: 270px;
         margin: 0 15px 30px;
+        text-align: center;
+        button {
+            height: 25px;
+            width: 25px;
+            margin: 5px 5px;
+            background: #4c68b3;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 25px;
+            box-sizing: border-box;
+            &.vk {
+                background: #4a7fbb;
+            }
+            &.twi {
+                background: #00abed;
+            }
+        }
         a {
             display: block;
             position: relative;
@@ -294,7 +315,7 @@ body {
             font-weight: bold;
             font-size: 1.2rem;
             text-decoration: none;
-            margin: 10px 0 20px;
+            margin: 10px 0 0px;
         }
     }
 }
