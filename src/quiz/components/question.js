@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import * as questionActions from '../actions/questionAction'
 
-
 class Question extends Component {
 	constructor(props) {
         super(props);

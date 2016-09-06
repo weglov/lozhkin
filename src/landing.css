@@ -384,11 +384,9 @@ body {
         margin-bottom: 10px;
     }
     .title {
-            text-align: left;
+        text-align: left;
     }
 }
-
-
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -521,12 +519,18 @@ input[type="checkbox"]:checked + label:after {
     -webkit-transform: rotate(-45deg) scale(1);
     transform: rotate(-45deg) scale(1);
 }
+
 .quiz {
+    .bad {
+        h3 {
+            color: #7396ff;
+        }
+    }
     h3 {
         font-family: "NeuchaRegular";
         color: #f8ac3f;
         font-size: 2rem;
-        line-height: 1;   
+        line-height: 1;
     }
     h4 {
         margin: 10px;
@@ -543,7 +547,7 @@ input[type="checkbox"]:checked + label:after {
     button {
         margin-top: 20px;
         cursor: pointer;
-        background:  #f8ac3f;
+        background: #f8ac3f;
         outline: none;
         padding: 5px 40px;
         border: none;
@@ -551,5 +555,78 @@ input[type="checkbox"]:checked + label:after {
         color: #000;
         font-size: 2rem;
         border-radius: 40px;
+        &.active {
+            display: none;
+        }
+    }
+}
+.quiz__result {
+    &__diagnos {
+        margin: 10px 0;
+        text-align: left;
+    }
+    &__therapy {
+        margin: 10px 0;
+        text-align: left;
+    }
+    strong {
+        font-weight: bold;
+    }
+}
+.share {
+    position: relative;
+    margin: 50px 0 30px;
+    display: none;
+    transition: all .3s;
+    &.active {
+        display: block;
+    }
+    &:before {
+        content: "";
+        background: url(./img/landing/share.png) no-repeat;
+        height: 6px;
+        display: block;
+        margin: 20px auto;
+        width: 440px;
+    }
+    &:after {
+        content: "";
+        background: url(./img/landing/share.png) no-repeat;
+        height: 6px;
+        background-position: -6px 0;
+        display: block;
+        margin: 20px auto;
+        width: 440px;
+    }
+    &__title {
+        font-weight: bold;
+        margin: 0 0 20px;
+    }
+    button&__FB {
+        background: url(./img/landing/share.png) no-repeat 0 0;
+        text-indent: -911199px;
+        width: 140px;
+        padding: 0;
+        margin: 0 5px;
+        border-radius: 0;
+        background-position: 0 -21px;
+    }
+    button&__VK {
+        background: url(./img/landing/share.png) no-repeat 0 0;
+        text-indent: -911199px;
+        width: 140px;
+        padding: 0;
+        margin: 0 5px;
+        border-radius: 0;
+        background-position: -149px -21px;
+    }
+    button&__TWI {
+        background: url(./img/landing/share.png) no-repeat 0 0;
+        text-indent: -911199px;
+        width: 140px;
+        padding: 0;
+        margin: 0 5px;
+        border-radius: 0;
+        background-position: -299px -21px;
     }
 }
