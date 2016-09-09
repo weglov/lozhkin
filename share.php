@@ -1,22 +1,39 @@
+<?php $array = [
+		1 => "Мой диагноз: сердцеразбитость.",
+		2 => "Мой диагноз: обострение плохофилии.",
+		3 => "Мой диагноз: психологический дальтонизм.",
+		4 => "Мой диагноз: острая котиковая недостаточность. ",
+		5 => "Мой диагноз: хроническая любвеневезучесть.",
+		6 => "Мой диагноз: гиперкотиковиноз.",
+		7 => "Мой диагноз: тяжелая виновиноватость.",
+		8 => "Мой диагноз: вялотекущая дэдлайносжигачка",
+		9 => "Мой диагноз: вирус тяжелого советоотрицания",
+		10 => "Мой диагноз: патологическое отрицание действительности.",
+		11 => "Мой диагноз: воспаление жизнелюбия.",
+		12 => "Мой диагноз: латентный пессимизм.",
+		13  => "Мой диагноз: хроническое заедание бытия."
+]; 
+$n = $_GET['n'];
+?>
 <!doctype html>
 <html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <title>Юмор и котики – средство от всех бед</title>
-    <meta property="og:url" content="http://lozhkin.ren.tv/share.php?n=<?php if (isset($_GET['n'])) { echo $_GET['n']; } ?>&t=<?php if (isset($_GET['t'])) { echo $_GET['t']; } ?>" />
+    <meta property="og:url" content="http://lozhkin.ren.tv/share.php?n=<?php if (isset($n)) { echo $n; } ?>" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Юмор и котики – средство от всех бед" />
-    <meta property="og:description" content="<?php if (isset($_GET['t'])) { echo $_GET['t']; } else { print('Юмор и котики – средство от всех бед'); } ?>" />
-    <meta property="og:image" content="http://lozhkin.ren.tv/result/<?php if (isset($_GET['n'])) { echo $_GET['n']; } ?>.jpg" />
+    <meta property="og:description" content="<?php print($array[$n]) ?>" />
+    <meta property="og:image" content="http://lozhkin.ren.tv/result/<?php if (isset($n)) { echo $n; } ?>.jpg" />
 
-
+<meta property="fb:app_id" content="1469802533285677" />
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@rentvchannel">
 <meta name="twitter:creator" content="@rentvchannel">
 <meta name="twitter:title" content="Юмор и котики – средство от всех бед">
-<meta name="twitter:description" content="<?php if (isset($_GET['t'])) { echo $_GET['t']; } else { print('Юмор и котики – средство от всех бед');} ?>">
-<meta name="twitter:image" content="http://lozhkin.ren.tv/result/<?php if (isset($_GET['n'])) { echo $_GET['n']; } ?>.jpg">
+<meta name="twitter:description" content="<?php print($array[$n]) ?>">
+<meta name="twitter:image" content="http://lozhkin.ren.tv/result/<?php if (isset($n)) { echo $n; } ?>.jpg">
 
 </head>
 
@@ -30,7 +47,7 @@
   ga('send', 'pageview');
 </script>
 <script>
-	ga('send', 'event', 'ЛОЖКИН', '<?php if (isset($_GET['n'])) { echo $_GET['n']; } ?>', 'Клик');
+	ga('send', 'event', 'ЛОЖКИН', '<?php if (isset($n)) { echo $n; } ?>', 'Клик');
 	location.href="http://lozhkin.ren.tv/";
 </script>
 <!-- Yandex.Metrika counter -->

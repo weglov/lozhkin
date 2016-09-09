@@ -11,14 +11,13 @@ export default class ButtonShare extends Component {
         }
     }
     onShareClick = (e) => {
-        let diagnos = 'Мой ' + this.props.share.title.replace(/<\/?[^>]+>/g,'').toLowerCase();
-        let url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&t=1';
+        let url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid;
         if (e.target.value === 'fb') {
-            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&t=' + decodeURI(diagnos);
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid;
         } else if (e.target.value === 'vk') {
-            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&description=' + decodeURI(diagnos);
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid;
         } else {
-            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid + '&text=' + decodeURI(diagnos);
+            url = this.state[e.target.value] + this.state.phpscript + '?n=' + this.props.uid;
         }
         window.open(url, '', "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600");
         }
